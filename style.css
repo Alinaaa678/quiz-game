@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: #f5efe6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+.container{
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen{
+    display: none;
+    padding:2rem;
+    text-align:center;
+}
+
+.screen.active{
+    display: block;
+}
+
+#start-screen h1{
+    color:#e86a33;
+    margin-bottom:20px;
+    font-size:2.5rem;
+}
+
+#start-screen p{
+    color:#666;
+    margin-bottom:30px;
+    font-size:1.1rem;
+}
+
+button{
+    background-color:#e86a33;
+    color:white;
+    border: none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-size:1.1rem;
+    cursor: pointer;
+    transition:background-color 0.3s;
+}
+
+button:hover{
+    background-color: #d45b28;
+}
+
+.quiz-header{
+    margin-bottom:1rem;
+}
+
+#question-text{
+    color:#333;
+    font-size:1.5rem;
+    margin-bottom:1rem;
+    font-weight: 500;
+}
+
+.quiz-info{
+    display:flex;
+    justify-content:space-between;
+    color:#666;
+    margin-bottom:10px;
+}
+
+.answers-container{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+/* 答案按钮 */
+.answer-btn{
+    background-color:#f2ecdf;
+    color:#333;
+    border:none;
+    padding:14px 18px;
+    border-radius:10px;
+    font-size:1rem;
+    text-align:left;
+    cursor:pointer;
+    transition:background-color 0.3s;
+    width:100%;
+}
+
+.answer-btn:hover:not(:disabled){
+    background-color:#e9e0cc;
+}
+
+.answer-btn.correct{
+    background-color:#d6f5d6;
+    color:#1c7c1c;
+}
+
+.answer-btn.wrong{
+    background-color:#f8d7d7;
+    color:#b02a2a;
+}
+
+/* 进度条 */
+.progress-bar{
+    width:100%;
+    height:8px;
+    background-color:#f0e9da;
+    border-radius:4px;
+    overflow:hidden;
+}
+
+.progress{
+    height:100%;
+    width:0%;
+    background-color:#e86a33;
+    border-radius:4px;
+    transition:width 0.3s ease;
+}
+
+/* 结果页 */
+#result-screen h1{
+    color:#e86a33;
+    margin-bottom:20px;
+    font-size:2.5rem;
+}
+
+.result-info{
+    background-color:#faf3e6;
+    border-radius:10px;
+    padding:24px;
+    margin-bottom:28px;
+}
+
+.result-info p{
+    color:#333;
+    font-size:1.1rem;
+    margin-bottom:10px;
+}
+
+.result-message{
+    color:#e86a33;
+    font-size:1.3rem;
+    font-weight:bold;
+}
